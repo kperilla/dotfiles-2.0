@@ -20,16 +20,17 @@ local plugins = {
   },
   {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
   'tpope/vim-fugitive',
-  --'rstacruz/vim-closer';
---  {'nvim-telescope/telescope.nvim', branch = '0.1.x', requires = { {'nvim-lua/plenary.nvim'} } };
---  {'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'}};
---  {
---    'nvim-treesitter/nvim-treesitter',
---    run = function()
---      local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
---      ts_update()
---    end,
---  };
+  'rstacruz/vim-closer';
+  -- lsp-zero
+--  {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
+--  {'neovim/nvim-lspconfig'},
+--  {'hrsh7th/cmp-nvim-lsp'},
+--  {'hrsh7th/nvim-cmp'},
+--  {'L3MON4D3/LuaSnip'},
+  -- lsp-zero
+  'williamboman/mason.nvim',
+  'williamboman/mason-lspconfig.nvim',
+  'neovim/nvim-lspconfig',
 }
 local opts = {}
 require("lazy").setup(plugins, opts)
