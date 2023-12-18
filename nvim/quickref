@@ -1,0 +1,10 @@
+QUICKREF:
+
+# Quick jump to file
+<leader>rf - get here
+<leader>vpp - edit to plugins
+
+# Code
+K - See help for hovered-over symbol (LSP)
+<leader>e - See error float
+

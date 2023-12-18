@@ -1,3 +1,6 @@
+local pluginPath = "~/.config/nvim/lua/plugins/init.lua"
+local quickrefPath = "~/.config/nvim/quickref"
+
 vim.g.mapleader = " " 
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
@@ -33,8 +36,15 @@ vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
-vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.config/nvim/lua/plugins/init.lua<CR>");
+--vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.config/nvim/lua/plugins/init.lua<CR>");
+vim.keymap.set("n", "<leader>vpp", "<cmd>e " .. pluginPath .. "<CR>");
+vim.keymap.set("n", "<leader>rf", "<cmd>e " .. quickrefPath .. "<CR>");
 
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
+end)
+
+-- LSP
+vim.keymap.set("n", "<leader>e", function()
+    vim.diagnostic.open_float()
 end)
