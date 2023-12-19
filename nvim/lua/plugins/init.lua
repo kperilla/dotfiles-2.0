@@ -31,7 +31,7 @@ local plugins = {
   'williamboman/mason.nvim',
   'williamboman/mason-lspconfig.nvim',
   'neovim/nvim-lspconfig',
-  'folke/trouble.nvim',
+  -- 'folke/trouble.nvim',
 }
 local opts = {}
 require("lazy").setup(plugins, opts)
