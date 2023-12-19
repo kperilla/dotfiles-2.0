@@ -1,10 +1,47 @@
 QUICKREF:
 
+# TODO: i.e.: to-find-out
+ - What's a preview window?
+ - Turn off mouse
+ - What are arguments? What does :args list?
+ - How do I use tags? (go back to windows.txt:section 9)
+
 # Quick jump to file
 <leader>rf - get here
 <leader>vpp - edit to plugins
 
+# Movement
+zz - Center on cursor
+
 # Code
 K - See help for hovered-over symbol (LSP)
 <leader>e - See error float
+
+# Windows
+CTRL-W CTRL-O - Zoom on current window
+:fc - close top floating window
+CTRL-W r/x - rotate/exchange windows in a column
+Directions:
+{
+    "lefta[bove]",
+    "abo[veleft]",
+    "rightb[elow]",
+    "bel[owright]" # Just below
+    "to[pleft]",
+    "bo[tright]" # Very bottom
+}
+
+# Buffers
+:bdelete, :bunload
+
+
+# Arglist
+:arg to show the files in your current arglist
+:argdo to run a command on your arglist
+:argadd or :arga to add files to your arglist
+:argdelete or :argd to remove files from your arglist
+:argdo update to save all changes to your arglist
+:argdo undo to undo changes to your arglist
+# TODO: What usecase does this have?
+There's also ":windo" and ":bufdo"
 
