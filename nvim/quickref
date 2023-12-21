@@ -33,6 +33,7 @@ Directions:
 
 # Buffers
 :bdelete, :bunload
+CRTL-O - Jump back to previous location (like after gd)
 
 
 # Arglist
