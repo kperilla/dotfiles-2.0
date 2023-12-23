@@ -1,0 +1,12 @@
+return {
+    -- Replace these with whatever servers you want to install
+    -- 'rust_analyzer',
+    -- 'tsserver',
+    -- 'csharp_ls',
+    -- 'omnisharp',
+    -- 'pyright',
+    -- 'lua_ls',
+    -- 'gopls',
+    -- 'dockerls',
+}
+

@@ -8,3 +8,18 @@ NeoVim config stolen from this video [ThePrimeagen's "0 to LSP : Neovim RC From 
  - You need to set up your SSH key to your own Github account or the mason
  installs will fail
  - xclip for clipboard access (I haven't figured it out for ssh though)
+ - Create a file `lua/kevin/my_lsp_servers.lua` with the LSP servers you want
+    - Format:
+```
+return {
+    -- Replace these with whatever servers you want to install
+    -- 'rust_analyzer',
+    -- 'tsserver',
+    -- 'csharp_ls',
+    -- 'omnisharp',
+    -- 'pyright',
+    -- 'lua_ls',
+    -- 'gopls',
+    -- 'dockerls',
+}
+```

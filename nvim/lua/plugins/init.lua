@@ -32,12 +32,14 @@ local plugins = {
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
     'neovim/nvim-lspconfig',
+    'hrsh7th/nvim-cmp',
+    'hrsh7th/cmp-nvim-lsp',
     -- 'folke/trouble.nvim',
-    {
-        'm4xshen/hardtime.nvim',
-        dependencies = { 'MunifTanjim/nui.nvim', 'nvim-lua/plenary.nvim' },
-        opts = {}
-    },
+--    {
+--        'm4xshen/hardtime.nvim',
+--        dependencies = { 'MunifTanjim/nui.nvim', 'nvim-lua/plenary.nvim' },
+--        opts = {}
+--    },
     { 'catppuccin/nvim', name = 'catppuccin', priority = 1000 }
 }
 local opts = {}

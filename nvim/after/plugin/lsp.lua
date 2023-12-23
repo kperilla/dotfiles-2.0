@@ -37,22 +37,13 @@ vim.api.nvim_create_autocmd('LspAttach', {
 })
 
 require('mason').setup()
+local my_lsp_servers = require('kevin.my_lsp_servers')
 require('mason-lspconfig').setup({
-    ensure_installed = {
-        -- Replace these with whatever servers you want to install
-        -- 'rust_analyzer',
-        -- 'tsserver',
-        -- 'csharp_ls',
-        -- 'omnisharp',
-        -- 'pyright',
-        -- 'lua_ls',
-        --'gopls',
-        -- 'dockerls',
-    }
+    ensure_installed = my_lsp_servers
 })
 
 local lspconfig = require('lspconfig')
--- local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
+local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
 -- lspconfig.lua_ls.setup {
 --     on_init = function(client)
 --         local path = client.workspace_folders[1].name
@@ -89,7 +80,7 @@ lspconfig.pyright.setup {}
 require('mason-lspconfig').setup_handlers({
     function(server_name)
         lspconfig[server_name].setup({
-            --capabilities = lsp_capabilities,
+            capabilities = lsp_capabilities,
         })
     end,
 })
