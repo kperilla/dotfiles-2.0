@@ -23,3 +23,9 @@ return {
     -- 'dockerls',
 }
 ```
+
+# TODO
+ - Make an install script
+ - Add tmux
+ - Add debugger support
+ - Add test support
