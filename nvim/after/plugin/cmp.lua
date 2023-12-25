@@ -1,18 +1,48 @@
-local cmp = require('cmp')
+vim.opt.pumblend = 10
 
+-- Luasnip config
+local luasnip = require 'luasnip'
+require('luasnip.loaders.from_vscode').lazy_load()
+luasnip.config.setup {}
+vim.keymap.set({ "i" }, "<C-S>", function() luasnip.expand() end, { silent = true })
+vim.keymap.set({ "i", "s" }, "<C-L>", function() luasnip.jump(1) end, { silent = true })
+vim.keymap.set({ "i", "s" }, "<C-J>", function() luasnip.jump(-1) end, { silent = true })
+vim.keymap.set({ "i", "s" }, "<C-E>", function()
+    if luasnip.choice_active() then
+        luasnip.change_choice(1)
+    end
+end, { silent = true })
+
+
+-- nvim-cmp config
+local cmp = require('cmp')
 cmp.setup {
-    -- snippet = {
-    --   expand = function(args)
-    --     luasnip.lsp_expand(args.body)
-    --   end,
-    -- },
+    snippet = {
+        expand = function(args)
+            luasnip.lsp_expand(args.body)
+        end,
+    },
     window = {
         completion = cmp.config.window.bordered(),
         documentation = cmp.config.window.bordered(),
     },
+    formatting = {
+        fields = { 'menu', 'abbr', 'kind' },
+        format = function(entry, item)
+            local menu_icon = {
+                nvim_lsp = 'λ',
+                luasnip = '⋗',
+                buffer = 'Ω',
+                path = '🖫',
+            }
+
+            item.menu = menu_icon[entry.source.name]
+            return item
+        end,
+    },
     completion = {
         completeopt = 'menu,menuone,noinsert',
-        keyword_length = 5,
+        -- keyword_length = 5,
     },
     mapping = cmp.mapping.preset.insert {
         ['<C-n>'] = cmp.mapping.select_next_item(),
@@ -46,8 +76,9 @@ cmp.setup {
     },
     sources = {
         { name = 'nvim_lsp' },
-        -- { name = 'luasnip' },
-        { name = 'buffer' },
+        { name = 'luasnip' },
+        { name = 'buffer',  keyword_length = 4 },
         { name = 'path' },
+        { name = 'nvim_lsp_signature_help' },
     },
 }
