@@ -29,3 +29,7 @@ return {
  - Add tmux
  - Add debugger support
  - Add test support
+
+# NOTES
+ - I had to comment out the bash_profile TERM set for tmux to show colors properly
+ - I have some code in tmux config
