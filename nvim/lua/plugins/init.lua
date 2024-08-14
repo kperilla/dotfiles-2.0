@@ -48,6 +48,8 @@ local plugins = {
     -- QoL
     'tpope/vim-fugitive',
     'rstacruz/vim-closer',
+    -- AI
+    'Exafunction/codeium.vim',
 }
 local opts = {}
 require("lazy").setup(plugins, opts)

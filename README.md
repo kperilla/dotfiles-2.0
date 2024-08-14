@@ -23,6 +23,7 @@ return {
     -- 'dockerls',
 }
 ```
+ - After install, run `:Codeium Auth`
 
 # TODO
  - Make an install script
