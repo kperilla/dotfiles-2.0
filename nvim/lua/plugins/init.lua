@@ -12,33 +12,42 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
+    -- Color schemes
     'rebelot/kanagawa.nvim',
+    {
+        'catppuccin/nvim',
+        name = 'catppuccin',
+        priority = 1000
+    },
+    -- Navigation
     {
         'nvim-telescope/telescope.nvim',
         tag = '0.1.5',
         -- or                              , branch = '0.1.x',
         dependencies = { 'nvim-lua/plenary.nvim' }
     },
+    -- LSP
     { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
-    'tpope/vim-fugitive',
-    'rstacruz/vim-closer',
-    -- lsp-zero
-    --  {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
-    --  {'neovim/nvim-lspconfig'},
-    --  {'hrsh7th/cmp-nvim-lsp'},
-    --  {'hrsh7th/nvim-cmp'},
-    --  {'L3MON4D3/LuaSnip'},
-    -- lsp-zero
+    'neovim/nvim-lspconfig',
+    -- Install management
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
-    'neovim/nvim-lspconfig',
-    -- 'folke/trouble.nvim',
+    -- Completion/snippets
+    'hrsh7th/nvim-cmp',
+    'hrsh7th/cmp-nvim-lsp',
+    'hrsh7th/cmp-buffer',
+    'hrsh7th/cmp-path',
+    'hrsh7th/cmp-nvim-lsp-signature-help',
+    'saadparwaiz1/cmp_luasnip',
+    'numToStr/Comment.nvim',
     {
-        'm4xshen/hardtime.nvim',
-        dependencies = { 'MunifTanjim/nui.nvim', 'nvim-lua/plenary.nvim' },
-        opts = {}
+        "L3MON4D3/LuaSnip",
+        version = "v2.*",
+        dependencies = { "rafamadriz/friendly-snippets" },
     },
-    { 'catppuccin/nvim', name = 'catppuccin', priority = 1000 }
+    -- QoL
+    'tpope/vim-fugitive',
+    'rstacruz/vim-closer',
 }
 local opts = {}
 require("lazy").setup(plugins, opts)
