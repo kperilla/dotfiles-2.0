@@ -47,7 +47,7 @@ local plugins = {
     },
     -- QoL
     'tpope/vim-fugitive',
-    'rstacruz/vim-closer',
+    -- 'rstacruz/vim-closer',
     -- AI
     -- 'Exafunction/codeium.vim',
 }
