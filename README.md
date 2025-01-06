@@ -23,13 +23,16 @@ return {
     -- 'dockerls',
 }
 ```
- - After install, run `:Codeium Auth`
+ - (If you're into that sort of thing...), for AI completion with Codeium,
+ uncomment the line in for `codeium.vim` in `nvim/lua/plugins/init.lua`,
+ then after install, run `:Codeium Auth`
 
 # TODO
- - Make an install script
+ - Add install instructions to README
  - Add tmux
  - Add debugger support
  - Add test support
+ - Add formatter support
 
 # NOTES
  - I had to comment out the bash_profile TERM set for tmux to show colors properly
