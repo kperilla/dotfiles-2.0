@@ -10,4 +10,4 @@ if [ ! -f ./nvim/lua/kevin/my_lsp_servers.lua ]; then
 fi
 
 echo "Installing Neovim config files..."
-cp -r ./nvim $CONF_DIR/nvim
+ln -sf "$(pwd)/nvim" $CONF_DIR/nvim

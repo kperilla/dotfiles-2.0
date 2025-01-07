@@ -1,6 +1,4 @@
-alias gs="git status"
-alias gd="git diff"
-alias gdc="git diff --cached"
+setopt histignoredups
 
 for inc in "${HOME}"/.zshrc.d/*; do
     source "$inc"

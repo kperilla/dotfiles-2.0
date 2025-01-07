@@ -27,10 +27,10 @@ fi
 
 
 ################
-# move files
+# link files
 ################
 echo "Installing config files..."
-cp ./$RC_FILE $HOME/$RC_FILE
-cp -r ./$RC_FILE.d $HOME/$RC_FILE.d
+ln -sf "$(pwd)/$RC_FILE" $HOME/$RC_FILE
+ln -sf "$(pwd)/$RC_FILE.d" $HOME/$RC_FILE.d
 
 source ./install_scripts/nvim_install.sh

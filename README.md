@@ -28,7 +28,6 @@ return {
  then after install, run `:Codeium Auth`
 
 # TODO
- - Make install use logical links
  - Add install instructions to README
  - Add tmux
  - Add debugger support
