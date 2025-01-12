@@ -33,4 +33,5 @@ echo "Installing config files..."
 ln -sf "$(pwd)/$RC_FILE" $HOME/$RC_FILE
 ln -sf "$(pwd)/$RC_FILE.d" $HOME/$RC_FILE.d
 
-source ./install_scripts/nvim_install.sh
+bash ./install_scripts/nvim_install.sh
+bash ./install_scripts/tmux_install.sh
