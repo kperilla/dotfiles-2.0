@@ -45,6 +45,8 @@ local plugins = {
         version = "v2.*",
         dependencies = { "rafamadriz/friendly-snippets" },
     },
+    -- Formatting
+    'mhartington/formatter.nvim',
     -- QoL
     'tpope/vim-fugitive',
     'tpope/vim-surround',
