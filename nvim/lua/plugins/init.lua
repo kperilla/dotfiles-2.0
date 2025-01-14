@@ -53,6 +53,7 @@ local plugins = {
     -- 'rstacruz/vim-closer',
     -- AI
     -- 'Exafunction/codeium.vim',
+    -- 'github/copilot.vim',
 }
 local opts = {}
 require("lazy").setup(plugins, opts)
