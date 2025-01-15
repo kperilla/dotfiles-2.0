@@ -1,7 +1,7 @@
 local pluginPath = "~/.config/nvim/lua/plugins/init.lua"
 local quickrefPath = "~/.config/nvim/quickref"
 
-vim.g.mapleader = " " 
+vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -27,8 +27,9 @@ vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
 -- vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
--- Something to do with quickfixes? idk
--- vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
+-- Cycle through quickfixes and location lists easily
+-- Overwrites useless shortcut that seems to just go down one line
+vim.keymap.set("n", "<C-n>", "<cmd>cnext<CR>zz")
 -- vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
 -- vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 -- vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")

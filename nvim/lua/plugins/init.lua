@@ -14,6 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 local plugins = {
     -- Color schemes
     'rebelot/kanagawa.nvim',
+    'tanvirtin/monokai.nvim',
     {
         'catppuccin/nvim',
         name = 'catppuccin',
@@ -57,3 +58,5 @@ local plugins = {
 }
 local opts = {}
 require("lazy").setup(plugins, opts)
+
+require("plugins.colors")
