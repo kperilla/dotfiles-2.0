@@ -47,6 +47,7 @@ For my personal use :)
     - Should I move my plugin config to make it simpler
  - How do you use the mason API?
     - Why are all the connector plugins so complicated?
+ - I should try to understand all of kickstart.nvim
 
 # Learning/wisdoms
  - Don't cheat yourself by learning with an AI code assistant

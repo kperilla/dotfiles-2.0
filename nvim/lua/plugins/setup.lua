@@ -27,7 +27,7 @@ local plugins = {
         -- or                              , branch = '0.1.x',
         dependencies = { 'nvim-lua/plenary.nvim' }
     },
-    'nvim-tree/nvim-tree.lua',
+    -- 'nvim-tree/nvim-tree.lua',
     -- LSP
     { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
     'neovim/nvim-lspconfig',
